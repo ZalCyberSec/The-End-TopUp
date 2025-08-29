@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The End - Top Up Game Termurah</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body { font-family: 'Poppins', sans-serif; background-color: #0f172a; color: #e2e8f0; }
+.gradient-bg { background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 50%, #1e293b 100%); }
+.game-card { transition: all 0.3s ease; background-color: #1e293b; border-radius: 12px; overflow: hidden; cursor:pointer; }
+.game-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(30, 64, 175, 0.3); }
+</style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="gradient-bg py-4 px-6 shadow-lg">
+<div class="container mx-auto flex justify-between items-center">
+    <div class="flex items-center space-x-2">
+        <i class="fas fa-gamepad text-2xl text-blue-400"></i>
+        <span class="text-2xl font-bold">THE <span class="text-blue-400">END</span></span>
+    </div>
+</div>
+</nav>
+
+<!-- Hero Section -->
+<section class="gradient-bg py-16 px-6">
+<div class="container mx-auto flex flex-col md:flex-row items-center">
+    <div class="md:w-1/2 mb-10 md:mb-0">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">TOP UP GAME <span class="text-blue-400">TERMURAH</span></h1>
+        <p class="text-lg mb-8">Isi Ulang Diamond, V-Bucks, Dan Mata Uang Game Lainnya Dengan Harga Terbaik Dan Proses Cepat!</p>
+        <div class="flex space-x-4">
+            <button class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full font-medium text-lg">Beli Sekarang</button>
+        </div>
+    </div>
+    <div class="md:w-1/2 flex justify-center">
+        <img src="https://files.catbox.moe/7spxou.jpg" alt="Karakter game populer" class="rounded-xl shadow-2xl">
+    </div>
+</div>
+</section>
+
+<!-- Game List Section -->
+<section id="game-list" class="py-16 px-6">
+<div class="container mx-auto">
+    <div class="flex justify-between items-center mb-12">
+        <h2 class="text-3xl font-bold">GAME POPULER</h2>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div class="game-card">
+            <div class="p-4">
+                <img src="https://files.catbox.moe/5pdvzv.jpg" alt="Genshin Impact" class="w-full h-32 object-cover rounded-lg mb-3">
+                <h3 class="font-semibold">Genshin Impact</h3>
+            </div>
+        </div>
+        <div class="game-card">
+            <div class="p-4">
+                <img src="https://files.catbox.moe/xbl6mq.jpg" alt="Mobile Legends" class="w-full h-32 object-cover rounded-lg mb-3">
+                <h3 class="font-semibold">Mobile Legends</h3>
+            </div>
+        </div>
+        <div class="game-card">
+            <div class="p-4">
+                <img src="https://files.catbox.moe/mvawz2.jpg" alt="Valorant" class="w-full h-32 object-cover rounded-lg mb-3">
+                <h3 class="font-semibold">Valorant</h3>
+            </div>
+        </div>
+        <div class="game-card">
+            <div class="p-4">
+                <img src="https://files.catbox.moe/ta4alo.jpg" alt="PUBG Mobile" class="w-full h-32 object-cover rounded-lg mb-3">
+                <h3 class="font-semibold">PUBG Mobile</h3>
+            </div>
+        </div>
+        <div class="game-card">
+            <div class="p-4">
+                <img src="https://files.catbox.moe/so4g8i.jpg" alt="Free Fire" class="w-full h-32 object-cover rounded-lg mb-3">
+                <h3 class="font-semibold">Free Fire</h3>
+            </div>
+        </div>
+        <div class="game-card">
+            <div class="p-4">
+                <img src="https://files.catbox.moe/s2osyf.jpg" alt="Call of Duty" class="w-full h-32 object-cover rounded-lg mb-3">
+                <h3 class="font-semibold">Call of Duty</h3>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Game Detail Section (hidden awalnya) -->
+<section id="game-detail" class="py-16 px-6 hidden">
+<div class="container mx-auto">
+    <button id="back-btn" class="mb-6 px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-full text-white">
+        <i class="fas fa-arrow-left mr-2"></i>Kembali ke List Game
+    </button>
+    <h2 id="detail-title" class="text-3xl font-bold text-blue-400 mb-6">Game Name</h2>
+    <div id="detail-content" class="space-y-4">
+        <!-- List top-up + harga akan muncul di sini -->
+    </div>
+    <h4 class="text-lg font-semibold mt-6 mb-2">Metode Pembayaran</h4>
+    <div class="flex flex-wrap gap-4" id="payment-methods">
+        <div class="flex items-center space-x-2 p-2 bg-[#111827] rounded-lg cursor-pointer hover:bg-blue-900">
+            <i class="fab fa-paypal text-2xl text-blue-400"></i><span>PayPal</span>
+        </div>
+        <div class="flex items-center space-x-2 p-2 bg-[#111827] rounded-lg cursor-pointer hover:bg-blue-900">
+            <i class="fas fa-credit-card text-2xl text-blue-400"></i><span>Kartu Kredit / Debit</span>
+        </div>
+        <div class="flex items-center space-x-2 p-2 bg-[#111827] rounded-lg cursor-pointer hover:bg-blue-900">
+            <i class="fas fa-wallet text-2xl text-blue-400"></i><span>OVO / GoPay / DANA</span>
+        </div>
+        <div class="flex items-center space-x-2 p-2 bg-[#111827] rounded-lg cursor-pointer hover:bg-blue-900">
+            <i class="fas fa-university text-2xl text-blue-400"></i><span>Transfer Bank</span>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="gradient-bg py-12 px-6 mt-16">
+<div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div>
+        <div class="flex items-center space-x-2 mb-4">
+            <i class="fas fa-gamepad text-2xl text-blue-400"></i>
+            <span class="text-2xl font-bold">THE <span class="text-blue-400">END</span></span>
+        </div>
+        <p class="mb-4">Salah Satu Tempat Top Up Game Termurah Dan Tercepat Di Indonesia.</p>
+    </div>
+</div>
+<div class="container mx-auto border-t border-slate-700 mt-12 pt-8 text-center">
+    <p>© The End Top Up 2025</p>
+</div>
+</footer>
+
+<script>
+const gameData = {
+    "Genshin Impact":[
+        {item:"Genesis Crystal", jumlah:"60", harga:"Rp 19.000"},
+        {item:"Genesis Crystal", jumlah:"300", harga:"Rp 90.000"}
+    ],
+    "Mobile Legends":[
+        {item:"Diamond", jumlah:"50", harga:"Rp 12.000"},
+        {item:"Diamond", jumlah:"250", harga:"Rp 60.000"}
+    ],
+    "Valorant":[
+        {item:"VP", jumlah:"500", harga:"Rp 85.000"}
+    ],
+    "PUBG Mobile":[
+        {item:"UC", jumlah:"60", harga:"Rp 13.000"}
+    ],
+    "Free Fire":[
+        {item:"Diamond", jumlah:"70", harga:"Rp 15.000"}
+    ],
+    "Call of Duty":[
+        {item:"CP", jumlah:"60", harga:"Rp 14.000"}
+    ]
+};
+
+const gameList = document.getElementById('game-list');
+const gameDetail = document.getElementById('game-detail');
+const detailTitle = document.getElementById('detail-title');
+const detailContent = document.getElementById('detail-content');
+const backBtn = document.getElementById('back-btn');
+
+document.querySelectorAll('.game-card').forEach(card=>{
+    card.addEventListener('click', function(){
+        const gameName = this.querySelector('h3').innerText;
+        gameList.classList.add('hidden');
+        gameDetail.classList.remove('hidden');
+        detailTitle.innerText = gameName;
+        detailContent.innerHTML="";
+        gameData[gameName].forEach(item=>{
+            const div = document.createElement('div');
+            div.classList.add('p-3','bg-[#1e293b]','rounded-lg','flex','justify-between','items-center','hover:bg-blue-900','cursor-pointer');
+            div.innerHTML=`<span>${item.item} - ${item.jumlah}</span><span class="font-semibold">${item.harga}</span>`;
+            detailContent.appendChild(div);
+        });
+    });
+});
+
+backBtn.addEventListener('click', ()=>{
+    gameDetail.classList.add('hidden');
+    gameList.classList.remove('hidden');
+});
+</script>
+</body>
+</html>
